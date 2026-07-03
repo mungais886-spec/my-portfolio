@@ -1,0 +1,288 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    min-height:65vh;
+    background:
+        linear-gradient(rgba(6,18,37,.65),rgba(6,18,37,.75)),
+        url("/kali.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    max-width:900px;
+    text-align:center;
+    color:white;
+    padding:2rem;
+}
+
+.overlay h1{
+    font-size:4rem;
+    margin-bottom:1rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.overlay p{
+    font-size:1.1rem;
+    color:#dbeafe;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.buttonContainer{
+    margin:2rem 0;
+}
+
+.backButton{
+    display:inline-block;
+    padding:.9rem 1.8rem;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.backButton:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.content,
+.details,
+.tools{
+    max-width:1200px;
+    margin:auto;
+    padding:6rem 8%;
+}
+
+.content span{
+    display:inline-block;
+    padding:.6rem 1.2rem;
+    border-radius:50px;
+    background:#dbeafe;
+    color:#2563eb;
+    font-weight:700;
+    margin-bottom:1rem;
+}
+
+.content h2,
+.details h2,
+.tools h2{
+    font-size:2.8rem;
+    color:#102a43;
+    margin-bottom:2rem;
+}
+
+.content p,
+.details p{
+    line-height:2;
+    color:#52606d;
+    margin-bottom:1.5rem;
+    text-align:justify;
+}
+
+
+/* =========================
+   TOOL WRAPPERS
+========================= */
+
+.nmapWrapper,
+.wiresharkWrapper,
+.metasploitWrapper{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:50px;
+    align-items:center;
+
+    margin-top:5rem;
+    margin-bottom:5rem;
+}
+
+.wiresharkWrapper{
+    grid-template-columns:1fr 340px;
+}
+
+.wireshark{
+    order:2;
+}
+
+.wiresharkDetails{
+    order:1;
+}
+
+
+/* =========================
+   TOOL CARDS
+========================= */
+
+.nmap,
+.wireshark,
+.metasploit{
+    background:white;
+    border-radius:25px;
+    padding:2rem;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.nmap:hover,
+.wireshark:hover,
+.metasploit:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 60px rgba(37,99,235,.18);
+}
+
+.nmap h2,
+.wireshark h2,
+.metasploit h2{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:1.5rem;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+.nmapImage,
+.wiresharkImage,
+.metasploitImage{
+    display:flex;
+    justify-content:center;
+}
+
+.nmapImage img,
+.wiresharkImage img,
+.metasploitImage img{
+    width:100%;
+    max-width:220px;
+    height:220px;
+    object-fit:contain;
+    transition:.35s;
+}
+
+.nmap:hover img,
+.wireshark:hover img,
+.metasploit:hover img{
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.detailsNmap,
+.wiresharkDetails,
+.metasploitDetails{
+    background:#f8fbff;
+    padding:2rem;
+    border-left:6px solid #2563eb;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.detailsNmap p,
+.wiresharkDetails p,
+.metasploitDetails p{
+    color:#52606d;
+    line-height:2;
+    text-align:justify;
+    margin-bottom:1rem;
+}
+
+.detailsNmap p:last-child,
+.wiresharkDetails p:last-child,
+.metasploitDetails p:last-child{
+    margin-bottom:0;
+}
+
+
+/* =========================
+   TOOLS TITLE
+========================= */
+
+.tools>h2{
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+.tools>h2::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:5px;
+    background:#2563eb;
+    margin:18px auto 0;
+    border-radius:20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+.hero{
+    min-height:55vh;
+}
+
+.overlay h1{
+    font-size:2.6rem;
+}
+
+.overlay p{
+    font-size:.95rem;
+    letter-spacing:1px;
+}
+
+.content,
+.details,
+.tools{
+    padding:4rem 6%;
+}
+
+.content h2,
+.details h2,
+.tools h2{
+    font-size:2rem;
+}
+
+.nmapWrapper,
+.wiresharkWrapper,
+.metasploitWrapper{
+    grid-template-columns:1fr;
+}
+
+.wireshark,
+.wiresharkDetails{
+    order:unset;
+}
+
+.nmapImage img,
+.wiresharkImage img,
+.metasploitImage img{
+    max-width:180px;
+    height:180px;
+}
+
+}

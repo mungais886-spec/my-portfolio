@@ -1,0 +1,283 @@
+
+/* ================= HERO ================= */
+
+.hero{
+    height:75vh;
+    background:url("/blog-banner.jpg") center center/cover no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(rgba(15,23,42,.82),rgba(30,41,59,.82));
+}
+
+.overlay{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    max-width:900px;
+    padding:20px;
+    color:#fff;
+}
+
+.tag{
+    display:inline-block;
+    padding:10px 22px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.overlay h1{
+    font-size:4rem;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.overlay p{
+    font-size:1.15rem;
+    line-height:1.9;
+    color:#e5e7eb;
+    margin-bottom:40px;
+}
+
+.heroButtons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.primaryButton,
+.secondaryButton{
+    padding:15px 35px;
+    border-radius:12px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.35s;
+    text-decoration:none;
+}
+
+.primaryButton{
+    background:linear-gradient(90deg,#4f46e5,#06b6d4);
+    color:#fff;
+}
+
+.primaryButton:hover{
+    transform:translateY(-5px);
+}
+
+.secondaryButton{
+    background:white;
+    color:#111827;
+    border:none;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin:80px 8%;
+}
+
+.statCard{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.statCard:hover{
+    transform:translateY(-8px);
+}
+
+.statCard h2{
+    color:#4f46e5;
+    font-size:2.4rem;
+}
+
+.statCard p{
+    color:#6b7280;
+    margin-top:10px;
+}
+
+/* ================= SEARCH ================= */
+
+.searchSection{
+    margin:90px auto;
+    max-width:850px;
+    text-align:center;
+}
+
+.searchSection h2{
+    font-size:2.3rem;
+    margin-bottom:15px;
+}
+
+.searchSection p{
+    color:#6b7280;
+    margin-bottom:30px;
+}
+
+.searchInput{
+    width:100%;
+    padding:18px 25px;
+    border-radius:15px;
+    border:2px solid #e5e7eb;
+    outline:none;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.searchInput:focus{
+    border-color:#4f46e5;
+    box-shadow:0 0 0 5px rgba(79,70,229,.15);
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:70px;
+}
+
+.categories span{
+    background:#eef2ff;
+    color:#4f46e5;
+    padding:12px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.categories span:hover{
+    background:#4f46e5;
+    color:white;
+}
+
+/* ================= POSTS ================= */
+
+.latestPosts{
+    padding:0 8% 100px;
+}
+
+.sectionHeading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.sectionHeading span{
+    color:#4f46e5;
+    font-weight:600;
+}
+
+.sectionHeading h2{
+    font-size:2.7rem;
+    margin-top:10px;
+}
+
+.sectionHeading h3{
+    color:#6b7280;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+}
+
+.noResults{
+    margin-top:80px;
+    text-align:center;
+}
+
+.noResults h2{
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.noResults p{
+    color:#6b7280;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.overlay h1{
+font-size:3rem;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+height:60vh;
+}
+
+.overlay h1{
+font-size:2.3rem;
+}
+
+.stats{
+grid-template-columns:1fr;
+margin:60px 5%;
+}
+
+.latestPosts{
+padding:0 5% 80px;
+}
+
+.sectionHeading{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+@media(max-width:500px){
+
+.overlay h1{
+font-size:1.9rem;
+}
+
+.overlay p{
+font-size:1rem;
+}
+
+.heroButtons{
+flex-direction:column;
+}
+
+.primaryButton,
+.secondaryButton{
+width:100%;
+}
+
+}

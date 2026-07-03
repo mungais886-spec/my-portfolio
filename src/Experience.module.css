@@ -1,0 +1,385 @@
+
+.hero{
+    min-height:60vh;
+
+    background:
+        linear-gradient(rgba(38, 61, 107, 0.75),rgba(12, 60, 155, 0.82)),
+        url("/experience-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:2rem;
+}
+
+.overlay{
+    max-width:900px;
+    color:white;
+}
+
+.tag{
+    display:inline-block;
+
+    padding:.8rem 1.6rem;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:50px;
+
+    margin-bottom:1.5rem;
+
+    letter-spacing:1px;
+
+    font-weight:600;
+}
+
+.overlay h1{
+
+    font-size:4rem;
+
+    margin-bottom:1.5rem;
+
+    line-height:1.1;
+}
+
+.overlay p{
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:#d8e6f5;
+}
+
+
+.section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:6rem 8%;
+}
+
+.section h2{
+
+    font-size:2.5rem;
+
+    color:#102a43;
+
+    margin-bottom:2rem;
+
+    position:relative;
+}
+
+.section h2::after{
+
+    content:"";
+
+    width:80px;
+
+    height:4px;
+
+    background:#2563eb;
+
+    display:block;
+
+    margin-top:10px;
+
+    border-radius:10px;
+}
+
+.section>p{
+
+    font-size:1.08rem;
+
+    color:#52606d;
+
+    line-height:2;
+
+    margin-bottom:3rem;
+
+    text-align:justify;
+}
+
+/* ===========================================
+   TIMELINE
+=========================================== */
+
+.timeline{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:2rem;
+}
+
+.card{
+
+    background:white;
+
+    padding:2rem;
+
+    border-radius:22px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    border-top:5px solid #2563eb;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(37,99,235,.18);
+}
+
+.card h3{
+
+    color:#102a43;
+
+    margin-bottom:.8rem;
+
+    font-size:1.5rem;
+}
+
+.card span{
+
+    display:inline-block;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    padding:.5rem 1rem;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:1.2rem;
+}
+
+.card p{
+
+    color:#5b6472;
+
+    line-height:1.9;
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:2rem;
+}
+
+.skillCard{
+
+    background:linear-gradient(145deg,#ffffff,#eef6ff);
+
+    padding:2rem;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.05);
+}
+
+.skillCard:hover{
+
+    transform:translateY(-8px);
+
+    background:#2563eb;
+
+    color:white;
+}
+
+.skillCard:hover h3,
+.skillCard:hover p{
+
+    color:white;
+}
+
+.skillCard h3{
+
+    color:#2563eb;
+
+    margin-bottom:1rem;
+}
+
+.skillCard p{
+
+    line-height:1.8;
+
+    color:#5b6472;
+}
+
+/* ===========================================
+   TOOLS
+=========================================== */
+
+.tools{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:1.5rem;
+
+    margin-top:2rem;
+}
+
+.tools div{
+
+    background:white;
+
+    padding:1.3rem;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#102a43;
+
+    border:1px solid #dbeafe;
+
+    transition:.3s;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.05);
+}
+
+.tools div:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:translateY(-6px);
+}
+
+/* ===========================================
+   ANIMATION
+=========================================== */
+
+.card,
+.skillCard,
+.tools div{
+
+    animation:fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================================
+   PAGE BACKGROUND
+=========================================== */
+
+body{
+
+    background:#f7fbff;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+    .overlay h1{
+
+        font-size:3rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        min-height:50vh;
+    }
+
+    .overlay h1{
+
+        font-size:2.5rem;
+    }
+
+    .overlay p{
+
+        font-size:1rem;
+    }
+
+    .section{
+
+        padding:4rem 6%;
+    }
+
+    .section h2{
+
+        font-size:2rem;
+    }
+
+    .timeline,
+    .grid,
+    .tools{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .overlay h1{
+
+        font-size:2rem;
+    }
+
+    .tag{
+
+        font-size:.8rem;
+    }
+
+}

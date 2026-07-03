@@ -1,0 +1,275 @@
+.navbar {
+  width: 95%;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(80, 120, 255, 0.12);
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #4f46e5,
+    #06b6d4
+  );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+
+  color: #374151;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.link:hover {
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #38bdf8
+  );
+
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(59, 130, 246, 0.2);
+}
+
+.link:active {
+  transform: scale(0.96);
+}
+.hamburger{
+    display:none;
+    font-size:2rem;
+    font-weight:700;
+    cursor:pointer;
+    color:#2563eb;
+    transition:.3s ease;
+    z-index: 1001;
+}
+
+.hamburger:hover{
+    transform:scale(1.1);
+}
+/* ========================= */
+/* Tablet Devices */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    width: 95%;
+    padding: 18px 25px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+}
+
+
+/* ========================= */
+/* Mobile Devices */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .link {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+
+}
+
+
+/* ========================= */
+/* Small Phones */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    margin: 15px auto;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+}
+
+/* Hamburger */
+
+.hamburger{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2563eb;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .navbar{
+        position:relative;
+    }
+
+    .navLinks{
+
+        display:none;
+
+        position:absolute;
+
+        top:90px;
+
+        left:0;
+
+        width:100%;
+
+        background:white;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:0;
+
+        border-radius:18px;
+
+        box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+        padding:20px 0;
+    }
+
+    .showMenu{
+        display:flex;
+    }
+
+    .navLinks li{
+        width:100%;
+    }
+
+    .link{
+        display:block;
+
+        width:100%;
+
+        padding:18px;
+
+        text-align:center;
+    }
+
+}
+
+.themeButton{
+
+width:48px;
+height:48px;
+border:none;
+border-radius:50%;
+cursor:pointer;
+
+background:var(--surface);
+
+color:var(--text);
+
+font-size:1.3rem;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+transition:.35s;
+
+}
+
+.themeButton:hover{
+
+transform:rotate(180deg) scale(1.1);
+
+background:var(--primary);
+
+color:white;
+
+}
+
+

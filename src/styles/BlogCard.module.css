@@ -1,0 +1,168 @@
+/* ===============================
+   BLOG CARD
+================================== */
+
+.card{
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:all .35s ease;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    border:1px solid #edf2f7;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(79,70,229,.18);
+}
+
+/* ===============================
+   IMAGE
+================================== */
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+/* ===============================
+   CONTENT
+================================== */
+
+.content{
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+/* Category */
+
+.content span{
+    width:fit-content;
+    background:#eef2ff;
+    color:#4f46e5;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:18px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+/* Title */
+
+.content h2{
+    font-size:1.6rem;
+    color:#111827;
+    margin-bottom:18px;
+    line-height:1.35;
+}
+
+/* Description */
+
+.content p{
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:25px;
+    flex:1;
+}
+
+/* ===============================
+   AUTHOR INFO
+================================== */
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    padding-top:18px;
+    border-top:1px solid #e5e7eb;
+}
+
+.info small{
+    color:#6b7280;
+    font-size:.9rem;
+    font-weight:500;
+}
+
+/* ===============================
+   BUTTON
+================================== */
+
+.readButton{
+    text-decoration:none;
+    background:linear-gradient(90deg,#4f46e5,#06b6d4);
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
+    transition:all .35s ease;
+}
+
+.readButton:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(79,70,229,.35);
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media(max-width:768px){
+
+.card img{
+    height:210px;
+}
+
+.content{
+    padding:22px;
+}
+
+.content h2{
+    font-size:1.35rem;
+}
+
+.info{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+}
+
+.readButton{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.card img{
+    height:190px;
+}
+
+.content{
+    padding:18px;
+}
+
+.content h2{
+    font-size:1.2rem;
+}
+
+.content p{
+    font-size:.95rem;
+}
+
+}
